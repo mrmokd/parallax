@@ -1,0 +1,397 @@
+ @chaerset "utf-8";
+		body {
+			margin:0 auto;
+			height: 3000px;
+		}
+		.text {
+            margin: 50px;
+			width: 150px;
+			height: 40px;
+			border-radius: 5%;
+		}
+		
+		.head {
+			height: 80px;
+            width: 100%;
+			background: transparent;
+			margin: 0 auto;
+			position: fixed;
+			top: 0;
+			z-index: 1;
+			transition: all .5s;
+		}
+
+
+		
+		h1 {
+			font-size: 40px;
+			font-family: 'Annie Use Your Telescope', cursive;
+			text-align: center;
+			margin: 50px 0;
+			letter-spacing: 2px;
+			padding-top: 40px;
+		}
+		
+		h2{
+			font-size: 40px;
+			font-family: 'Poiret One', cursive; 
+			text-align: center;
+			margin: 50px 0;
+			font-weight: 100;
+			letter-spacing: 1px;
+			
+		}
+		
+		p{
+			font-size: 16px;
+			font-family:  'Josefin Sans', serif;
+			text-align: center;
+			width: 800px;
+			margin: auto;
+			line-height: 25px;
+			letter-spacing: 1px;
+		}
+		
+		.head p:hover {
+			transform:scale(1.5);
+		}
+		
+		#groval-nav li{
+			list-style: none;
+		    font-size: 40px;
+			padding: 20px 0;
+			color: #fff;	
+			font-family: 'Annie Use Your Telescope', cursive;
+			font-weight: 100;
+		}
+		
+		#groval-nav {
+			position: fixed;
+			top:80;
+			left:800px;
+			right: 0;
+			bottom: 0;
+			background: rgba(0,0,0,0.8);
+            transform: translate(100%);
+			transition: all .5s;
+			z-index: 2;
+			width: 100%;
+		}
+		
+		#groval-nav.active {
+            transform: translateY(0%);
+        }
+		
+		.bg {
+           background-color: rgba(34,34,34,.3);
+           position: fixed;
+           top: 0;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           overflow: hidden;
+		   transition: all .5s;
+		   display: none;
+		}
+		
+		
+		li a {
+			text-decoration: none;
+			display: inline-block;
+			position: relative;
+			color: #fff;
+			letter-spacing: 2px;
+			margin-left: 50px;
+		}
+		
+		a::after {
+			position: absolute;
+			bottom: -4px;
+			left:0;
+			content:'';
+			width: 100%;
+			height: 2px;
+			background: #fff;
+			transform: scale(0,1);
+			transform-origin: left top;
+			transition: transform .2s;
+		}
+		
+		a:hover::after {
+			transform-origin: right top;
+			transform: scale(1,1);
+		}
+				
+		button {
+			width:100px;
+			margin: 100px;
+		
+		}
+		.parallax {
+            background-attachment: fixed;
+            width: 100%;
+            padding-top: 66.66%;
+            background-position: center 0;
+            background-repeat: no-repeat;
+        }
+		
+		.bg_1 {
+			 background: url(../img/111.jpg);
+			 background-size: cover;
+			 background-position: center 0;
+             background-repeat: no-repeat;
+			 background-attachment: fixed;
+			 position: relative;
+		     bottom:30px;
+		}
+		.bg_2 { 
+			 background: url(../img/7.jpg);
+			 background-size: cover;
+			 background-position: center 0;
+             background-repeat: no-repeat;
+			 background-attachment: fixed;
+		}
+		.bg_3 {
+			 background: url(../img/2.jpeg);
+			 background-size: cover;
+			 background-position: center 0;
+             background-repeat: no-repeat;
+			 background-attachment: fixed;
+		}
+		
+		.content {
+			height: 400px;
+			margin: 0 auto;
+		}
+		
+		.content2 {
+			height: 600px;
+		}
+		
+		.content1 h2{
+			padding-top: 40px;
+		}
+		
+		
+
+
+
+.bg_3 h1{
+	font-size: 140px;
+	color:#fff;
+	font-weight: 100;
+	position:fixed;
+	opacity: 0;
+}
+
+/*トグル*/
+
+#nav-toggle {
+    display: block;
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    top: 0px;
+    right: 10px;
+	z-index: 990;
+	transition: all .5s;
+}
+
+
+#nav-toggle div {
+    height: 1px;
+    width: 60%;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .3s;
+}
+
+#nav-toggle div:nth-of-type(1){
+    transform: translate(-50%,-15px);
+    transform-origin: 0% 50%;
+}
+
+#nav-toggle div:nth-of-type(3){
+    transform: translate(-50%,15px);
+    transform-origin: 0% 50%; 
+}
+
+/*クリックしたときに真ん中を消して×に*/
+#nav-toggle.active div:nth-of-type(2) {
+    opacity: 0;
+}
+#nav-toggle.active div:nth-of-type(1) {
+    transform: rotate(45deg) translate(-50%,0);
+}
+#nav-toggle.active div:nth-of-type(3) {
+    transform: rotate(-45deg) translate(-50%,0);
+}
+
+/*ボタン*/
+
+.btn{
+	margin: auto;
+	width:150px;
+	height: 35px;
+	background: #000;
+	border-radius: 5px;
+	padding-top:10px;
+	margin-top: 50px;
+}
+
+.btn a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.content3 img{
+    width:500px;
+	margin: 0 auto;
+    display: block;
+	border-radius: 3%;
+	margin-bottom: 100px;
+}
+
+.content3 {
+	margin-bottom: 100px;
+}
+
+.content3 p {
+    margin-bottom: 70px;
+}
+
+
+
+/* メディアクエリ　*/
+@media screen and (max-width:600px) {
+	
+	body {
+		margin: auto;
+		width: 100%;
+	}
+	
+	p {
+		width: 90%;
+		
+	}
+	
+	.parallax {
+	
+		
+	}
+	
+	.bg_1 {
+		background: url(../img/6.jpg);
+		background-size: 100%;
+		background-position: center 0;
+        background-repeat: no-repeat;
+		background-attachment: fixed;
+		height: 600px;
+		max-width: 100%;
+	}
+	
+	.bg_2 {
+		background: url(../img/11.jpg);
+		background-size:contain;
+		background-position: center 0;
+        background-repeat: no-repeat;
+		background-attachment: fixed;
+		height: 350px;
+		max-width: 100%;
+	}
+	
+	.content2 {
+			height: 750px;
+		}
+	
+	
+	.bg_3 {
+		background: url(../img/photo-1528712306091-ed0763094c98.jpeg);
+		background-size: 100%;
+		background-position: center 0;
+        background-repeat: no-repeat;
+		background-attachment: fixed;
+		height: 400px;
+		
+	}
+	
+	.content3 img{
+        width:300px;
+	    margin: 0 auto;
+        display: block;
+     	margin-bottom: 100px;
+}
+	
+	#groval-nav {
+			position: fixed;
+			top:80;
+			left:100px;
+			right: 0;
+			bottom: 0;
+			background:rgba(0,0,0,0.8);
+            transform: translate(100%);
+			transition: all .5s;
+			z-index: 2;
+			width: 100%;
+		}
+	#groval-nav ul {
+		  padding: 0;
+	}
+	
+		
+	.bg_1 h2 {
+		font-size: 25px!important;
+		margin: auto;
+		padding: 0 50px 0 0!important;
+		position:absolute;
+		left: 50px !important;
+		top: 550px !important;
+	
+	}
+	
+	.center h1{
+		font-size: 80px!important;
+		margin: auto;
+	    position:absolute;
+		top:420px!important;
+		left:130px!important;
+	}
+	
+}
+
+.bg_1 h2 {
+			position:absolute;
+			top:600px;
+			left:120px;
+			font-weight: 100;
+			color: #fff;
+			z-index: inherit;
+			margin: auto;
+			font-size: 50px;
+			padding: 0;
+	        font-family: 'Annie Use Your Telescope', cursive;
+	        padding-right: 200px;
+	   
+		}
+
+.center h1{
+		font-size:100px;
+	    position:absolute;
+		top:450px;
+		left:180px;
+		font-weight: 100 ;
+		color: #fff;
+		z-index: inherit;
+		margin: auto;
+		padding: 0;
+	   
+	}
+
+
+
+
+
+

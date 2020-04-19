@@ -1,0 +1,229 @@
+<! DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Annie+Use+Your+Telescope|Josefin+Sans:300|Nixie+One|Noto+Serif+JP:200|Noto+Serif+SC:200|Playfair+Display:800|Poiret+One|Quicksand:300|Rozha+One|Shadows+Into+Light|Source+Code+Pro:300|Vidaloka&display=swap&subset=japanese" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/g.png">
+    <link rel="apple-touch-icon" href="./img/g.png" sizes="180x180">　
+    <link rel="icon" type="image/png" href="./img/g.png" sizes="192x192">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<title>gogle</title>
+		
+</head>
+<body>
+ <header>
+   <div class="head">
+	   <div id="nav-toggle">
+	     <div></div>
+	     <div></div>
+	     <div></div>
+       </div>
+   </div>
+</header>
+	
+	<nav id="groval-nav">
+	  <ul>
+		<li><a href="">HOME</a></li>
+		<li><a href="#photography">PHOTOGRAPHY</a></li>
+		<li><a href="#food">FOOD</a></li>
+		<li><a href="recipe">RECIPE</a></li>
+	  </ul>
+		
+	<input type="text" class="text" placeholder="Search">
+		
+	</nav>
+	
+	<div class="bg"></div>
+	
+	
+<div class="parallax bg_1"> 
+	
+	<div class="center">
+	  <h1>gogle</h1>
+		 <h2><span class="type"></span></h2>
+	</div>
+	
+	</div>
+<div class="content content1" id="photography">
+   <h2>Welcome to the cutest Dog Pictures Site</h2>
+      <p> We update gogle pictures on a daily basis<br>
+      <p class="btn"><a href="work.html">Go to see Pic</a><br><br>
+      </p>
+</div>
+<div class="parallax bg_2"></div>
+<div class="content content2">
+   <h1 class="food" id="food">food</h1>
+      <h2>Homemade Dog Food </h2>
+      <p>Keep your dog health and fit with this easy peasy homemade recipe - it's cheaper than store-bought and chockfull of fleash veggies!<br>
+          
+        
+      
+          
+          Your dog is part of your family, and you may be willing to do most anythings for your dog. We usually make Homamade Dog foods. They are really healthy and keep your dog health. It also help to prevent cbesity.<br>
+          Make dog food is unexpectedly easier than you might think because you don't need think about seasoning, and we use vegetables mainly, you can use same things as human and don't need to buy extra more things. We are intoroducing very Simple way tp make dog food in this Web site and YouTube Video. <br>
+          if you want to know more deteils, Let's check it out!<br></p>
+</div>
+<div class="parallax bg_3"><h1>Homemade Dog Food</h1></div>
+<div class="content content3">
+  <h1 class="recipe" id="recipe">recipe</h1>
+      <h2>How to make your Own Dog Food.</h2>
+      <p>Here is how to make dog food at home that is complete and balanced and thatyour dog will love!<br><br>
+          
+         <span style="font-size:30px;"> Ingredients:</span><br><br>
+・ground chicken<br>
+・carrots<br>
+・pumpkins<br>
+・cucumbers<br>
+・peas<br>
+・brown rice<br></p>
+	
+	
+	<img class="foodimg" src="img/DSC02387.jpg">
+      
+</div>
+	
+	
+	
+
+	
+    <script>
+        　$(function(){
+			 $('.text').focus(function (){
+				 $(this).css('background','#dcdcdc')
+			 })
+			 .blur(function (){
+				 $(this).css('background','#fff')
+			 })
+			 $('li a').hover(
+				 function(){
+				 $(this).css('color','#aaa');
+			 },
+			     function(){
+				 $(this).css('color','#fff');
+			 })
+			 
+			 $('#nav-toggle').click(function(){
+			 $(this).toggleClass("active");
+		       if($(this).hasClass('active')) {
+			$('#groval-nav').addClass('active');
+		    $('.bg').fadeIn();
+		    $('.head').css('background','rgba(0,0,0,0.8)');
+		       } else {
+			$('#groval-nav').removeClass('active');
+		    $('.bg').hide();
+		    $('.head').css('background','transparent');
+		       }
+			 })
+			 
+			 
+			 
+			 $(window).scroll(function (){
+			   var dy= $(this).scrollTop();
+			   var pos1=$('.bg_3 h1').offset();
+				 console.log(dy);
+				 
+		     	if (dy>1100){
+					 $('.head').css('background','rgba(0,0,0,0.5)');
+			         $('#nav-toggle div').css('background','#fff');
+				 }else{
+					 $('.head').css('background','transparent');
+					 $('#nav-toggle div').css('background','#000');
+				 }
+				 
+				 if($(window).innerWidth()>= 650){
+				 if (dy>2700){
+					 $('.bg_3 h1').css('opacity',(dy-2700)/200);
+					 //ポジション
+					 $('.bg_3 h1').css('top',200).css('left',250);
+				 }else{
+					 $('.bg_3 h1').css('opacity',0);
+				 }
+				 if (dy>3650){
+					 $('.bg_3 h1').css('opacity',0);
+				 }
+				}
+			 });
+           });
+		
+		
+		
+		
+		$(function () {
+            var bg1_top = $(".bg_1").offset().top;
+            var bg2_top = $(".bg_2").offset().top;
+            var bg3_top = $(".bg_3").offset().top;
+
+            var win_h = $(window).height();
+            var start_bg1 = bg1_top - win_h;
+            var start_bg2 = bg2_top - win_h;
+            var start_bg3 = bg3_top - win_h;
+
+            $("#bg1_int span.ans1").text(start_bg1);
+            $("#bg2_int span.ans1").text(start_bg2);
+            $("#bg3_int span.ans1").text(start_bg3);
+            $("#w_h span.ans1").text(win_h);
+
+
+            $(window).scroll(function () {
+                var y = $(this).scrollTop();
+
+				
+                //チェック用
+                $("#scroll span").text(y);
+
+                if (y >= start_bg1) {
+                    
+                    $('.bg_1').css('background-position-y', -(y - bg1_top) * 0.5 + 'px');
+                } else {
+                    $("#bg1_int span.ans2").text("元の位置");
+                }
+                if (y > start_bg2) {
+                    
+                    $('.bg_2').css('background-position-y', - (y - bg2_top) * 0.5 + 'px');
+                } else {
+                    $("#bg2_int span.ans2").text("ウィンドウより下");
+                }
+                if (y > start_bg3) {
+                    $('.bg_3').css('background-position-y', - (y - bg3_top) * 0.5 + 'px');
+
+                } else {
+                    $("#bg3_int span.ans2").text("ウィンドウより下");
+                }
+
+            });
+        });
+		
+		
+    
+    </script>
+	
+	<script src="typed.js"></script>
+	<script type="text/javascript">
+		var typed = new Typed('.type', {
+       // Waits 1000ms after typing "First"
+      strings: [
+		  'Hello', 
+		  'Welcome to the cutest Dog Pictures Site.', 
+		  'He is Shih-poo that is cross between a Shih Tzu and Toy Poodlr.',
+	      
+	  ],
+			
+			typeSpeed: 80,
+			loop:true,
+});
+	</script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
